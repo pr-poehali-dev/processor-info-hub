@@ -29,68 +29,74 @@ const MainLayout = ({ children }: MainLayoutProps) => {
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <Link to="/">
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                <NavigationMenuLink asChild>
+                  <Link to="/" className={navigationMenuTriggerStyle()}>
                     Главная
-                  </NavigationMenuLink>
-                </Link>
+                  </Link>
+                </NavigationMenuLink>
               </NavigationMenuItem>
               
               <NavigationMenuItem>
                 <NavigationMenuTrigger>Процессоры</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <div className="grid gap-3 p-4 w-[400px]">
-                    <Link to="/processors/intel" className="block p-3 hover:bg-accent rounded-md">
-                      Intel
-                    </Link>
-                    <Link to="/processors/amd" className="block p-3 hover:bg-accent rounded-md">
-                      AMD
-                    </Link>
-                    <Link to="/processors/others" className="block p-3 hover:bg-accent rounded-md">
-                      Другие производители
-                    </Link>
+                    <NavigationMenuLink asChild>
+                      <Link to="/processors/intel" className="block p-3 hover:bg-accent rounded-md">
+                        Intel
+                      </Link>
+                    </NavigationMenuLink>
+                    <NavigationMenuLink asChild>
+                      <Link to="/processors/amd" className="block p-3 hover:bg-accent rounded-md">
+                        AMD
+                      </Link>
+                    </NavigationMenuLink>
+                    <NavigationMenuLink asChild>
+                      <Link to="/processors/others" className="block p-3 hover:bg-accent rounded-md">
+                        Другие производители
+                      </Link>
+                    </NavigationMenuLink>
                   </div>
                 </NavigationMenuContent>
               </NavigationMenuItem>
               
               <NavigationMenuItem>
-                <Link to="/compare">
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                <NavigationMenuLink asChild>
+                  <Link to="/compare" className={navigationMenuTriggerStyle()}>
                     Сравнения
-                  </NavigationMenuLink>
-                </Link>
+                  </Link>
+                </NavigationMenuLink>
               </NavigationMenuItem>
               
               <NavigationMenuItem>
-                <Link to="/news">
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                <NavigationMenuLink asChild>
+                  <Link to="/news" className={navigationMenuTriggerStyle()}>
                     Новости
-                  </NavigationMenuLink>
-                </Link>
+                  </Link>
+                </NavigationMenuLink>
               </NavigationMenuItem>
               
               <NavigationMenuItem>
-                <Link to="/articles">
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                <NavigationMenuLink asChild>
+                  <Link to="/articles" className={navigationMenuTriggerStyle()}>
                     Статьи
-                  </NavigationMenuLink>
-                </Link>
+                  </Link>
+                </NavigationMenuLink>
               </NavigationMenuItem>
               
               <NavigationMenuItem>
-                <Link to="/knowledge">
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                <NavigationMenuLink asChild>
+                  <Link to="/knowledge" className={navigationMenuTriggerStyle()}>
                     База знаний
-                  </NavigationMenuLink>
-                </Link>
+                  </Link>
+                </NavigationMenuLink>
               </NavigationMenuItem>
               
               <NavigationMenuItem>
-                <Link to="/market">
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                <NavigationMenuLink asChild>
+                  <Link to="/market" className={navigationMenuTriggerStyle()}>
                     Binary Market
-                  </NavigationMenuLink>
-                </Link>
+                  </Link>
+                </NavigationMenuLink>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
