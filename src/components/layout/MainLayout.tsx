@@ -20,35 +20,37 @@ const MainLayout = ({ children }: MainLayoutProps) => {
           </Link>
           
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            <Link to="/processors" className="text-foreground font-medium hover:text-primary transition-colors">
-              Процессоры
-            </Link>
-            <Link to="/compare" className="text-foreground font-medium hover:text-primary transition-colors">
-              Сравнения
-            </Link>
-            <Link to="/news" className="text-foreground font-medium hover:text-primary transition-colors">
-              Новости
-            </Link>
-            <Link to="/contacts" className="text-foreground font-medium hover:text-primary transition-colors">
-              Контакты
-            </Link>
+          <nav className="flex items-center">
+            <div className="flex items-center space-x-8 mr-8">
+              <Link to="/processors" className="text-foreground font-medium hover:text-primary transition-colors">
+                Процессоры
+              </Link>
+              <Link to="/compare" className="text-foreground font-medium hover:text-primary transition-colors">
+                Сравнения
+              </Link>
+              <Link to="/news" className="text-foreground font-medium hover:text-primary transition-colors">
+                Новости
+              </Link>
+              <Link to="/contacts" className="text-foreground font-medium hover:text-primary transition-colors">
+                Контакты
+              </Link>
+            </div>
+            
+            {/* Burger menu icon always visible */}
+            <Button 
+              variant="ghost" 
+              size="icon" 
+              className=""
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              <Menu className="h-6 w-6" />
+            </Button>
           </nav>
-          
-          {/* Mobile Menu Button */}
-          <Button 
-            variant="ghost" 
-            size="icon" 
-            className="md:hidden"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            <Menu className="h-6 w-6" />
-          </Button>
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden border-t">
+          <div className="border-t">
             <div className="container mx-auto py-4 space-y-4">
               <Link 
                 to="/processors" 
